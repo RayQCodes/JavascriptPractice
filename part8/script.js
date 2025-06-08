@@ -61,15 +61,15 @@ tealist.addEventListener("click", function (event) {
 });
 
 //example 8:
-let forms = document.getElementById("feedbackForm");
-forms.addEventListener("submit", function (event) {
+const form = document.getElementById("feedbackForm");
+const submitbutton = form.children[2];
+
+submitbutton.addEventListener("click", function (event) {
   event.preventDefault();
   let input = document.getElementById("feedbackInput").value;
-
   let display = document.getElementById("feedbackDisplay");
   display.textContent = input;
 });
-
 //example 9 : DOM content loaded
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("domStatus").textContent = "Dom fully loaded";
