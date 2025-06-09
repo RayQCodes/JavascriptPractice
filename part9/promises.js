@@ -1,18 +1,17 @@
-function fetchData() {
+//creataing a promise function
+function datafetch() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      let success = false;
-      if (success) {
-        resolve("data fetched successfully");
-      } else {
-        reject("Error fetching data");
-      }
-    }, 3000);
+    let success = true;
+    if (success) {
+      resolve("Data succesfully fetched");
+    } else {
+      reject("Data reach unsuccessful");
+    }
   });
 }
 
-//consuming the promise
-fetchData()
+//checking a promise:
+datafetch()
   .then((resolve) => {
     console.log(resolve);
   })
